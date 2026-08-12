@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supratim Bhattacharyya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #14181F;
+    --ink-soft: #565D6B;
+    --canvas: #EFF0EA;
+    --panel: #FFFFFF;
+    --rail: #D4D6CD;
+    --signal: #D4463A;
+    --verify: #1F7A5C;
+    --gold: #A9812F;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --font-body: 'Inter', sans-serif;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; background:var(--canvas); color:var(--ink);
+    font-family: var(--font-body); line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  a{ color:inherit; }
+  ::selection{ background: var(--signal); color:#fff; }
+  :focus-visible{ outline:2px solid var(--signal); outline-offset:3px; }
+
+  .wrap{ max-width: 860px; margin:0 auto; padding: 0 28px; }
+
+  /* HERO */
+  header{ padding: 64px 0 40px; border-bottom: 1px solid var(--rail); }
+  .eyebrow{
+    font-family: var(--font-mono); font-size:12px; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--ink-soft); margin-bottom:14px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .eyebrow .dot{ width:7px; height:7px; border-radius:50%; background:var(--verify); }
+  h1{
+    font-family:var(--font-display); font-weight:700;
+    font-size: clamp(2.1rem, 5vw, 3rem); margin:0 0 10px; letter-spacing:-.01em;
+  }
+  .title{
+    font-family: var(--font-display); font-weight:500;
+    font-size: clamp(1rem,2vw,1.2rem); color:var(--ink-soft); margin:0 0 28px;
+  }
+
+  /* STAT ROW — one glance summary */
+  .stats{
+    display:grid; grid-template-columns: repeat(3, 1fr); gap:1px;
+    background: var(--rail); border:1px solid var(--rail);
+  }
+  .stat{ background:var(--panel); padding: 18px 20px; }
+  .stat .num{ font-family:var(--font-mono); font-size:1.3rem; font-weight:500; color:var(--signal); }
+  .stat .label{ font-size:.82rem; color:var(--ink-soft); margin-top:4px; }
+  @media (max-width:640px){ .stats{ grid-template-columns:1fr; } }
+
+  /* SECTIONS */
+  section{ padding: 44px 0; border-bottom: 1px solid var(--rail); }
+  h2{
+    font-family:var(--font-display); font-size:1.05rem; font-weight:600;
+    margin:0 0 20px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft);
+  }
+
+  /* TRACK RECORD — simple compact list */
+  .track{ list-style:none; margin:0; padding:0; }
+  .track li{
+    display:flex; gap:14px; padding:12px 0; border-top:1px dashed var(--rail); font-size:.95rem;
+  }
+  .track li:first-child{ border-top:none; }
+  .track .name{ font-weight:600; min-width: 230px; }
+  .track .desc{ color:var(--ink-soft); }
+  @media (max-width:640px){
+    .track li{ flex-direction:column; gap:2px; }
+    .track .name{ min-width:auto; }
+  }
+
+  .patent{
+    margin-top:18px; display:inline-flex; align-items:center; gap:9px;
+    border:1px solid var(--verify); color:var(--verify);
+    padding:8px 13px; font-family:var(--font-mono); font-size:11.5px;
+  }
+  .patent svg{ width:13px; height:13px; }
+
+  /* APPS GRID */
+  .cards{
+    display:grid; grid-template-columns: repeat(auto-fill, minmax(230px,1fr));
+    gap:1px; background:var(--rail); border:1px solid var(--rail);
+  }
+  .card{ background:var(--panel); padding:20px; display:flex; flex-direction:column; gap:8px; }
+  .card h3{ font-family:var(--font-display); font-size:1rem; margin:0; font-weight:600; }
+  .card p{ margin:0; color:var(--ink-soft); font-size:.86rem; flex-grow:1; }
+  .card a{
+    font-family:var(--font-mono); font-size:11px; text-decoration:none; color:var(--signal);
+    padding-top:8px; border-top:1px dashed var(--rail);
+  }
+  .card a:hover{ text-decoration:underline; }
+
+  /* FOOTER */
+  footer{ padding: 36px 0 56px; text-align:center; }
+  footer p{ font-family:var(--font-mono); font-size:11.5px; color:var(--ink-soft); margin:0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow"><span class="dot"></span> Founder Profile</div>
+    <h1>Supratim Bhattacharyya</h1>
+    <p class="title">Digital identity &amp; payments infrastructure builder</p>
+
+    <div class="stats">
+      <div class="stat"><div class="num">16+ yrs</div><div class="label">Software industry</div></div>
+      <div class="stat"><div class="num">MBA · B.Tech</div><div class="label">Finance / Computer Science</div></div>
+      <div class="stat"><div class="num">Patent Granted</div><div class="label">Cryptographic digital identity</div></div>
+    </div>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p>10+ years building digital solutions in BFSI, plus 3+ years in automobile and sustainability problem-solving. Inventor of a cryptographic digital identity method, granted as a patent.</p>
+    <div class="patent">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+      Patent Granted — App. No. 202031039134
+    </div>
+  </section>
+
+  <section>
+    <h2>Things I've built</h2>
+    <ul class="track">
+      <li><span class="name">London Transit</span><span class="desc">Visa tokenization for contactless fare payments.</span></li>
+      <li><span class="name">UPI</span><span class="desc">Virtual Private Address — the identifier behind India's real-time payments.</span></li>
+      <li><span class="name">BBPS</span><span class="desc">Initial design of India's interoperable bill-payment network.</span></li>
+      <li><span class="name">ACS 2.0</span><span class="desc">Payment OTPs for card authentication.</span></li>
+      <li><span class="name">Payment Gateways &amp; Processors</span><span class="desc">Upgrade programs incl. Merchant E-Solutions, TSYS.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Apps &amp; ventures</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Business Outlook</h3>
+        <p>A website to hold innovation as consultancy.</p>
+        <a href="https://businesstodaytomorrow.weebly.com/" target="_blank" rel="noopener">Visit ↗</a>
+      </div>
+      <div class="card">
+        <h3>Bizmora Pay</h3>
+        <p>First startup — granted a patent, but failed on long enterprise sales cycles and capital needs. Taught me product-market fit and enterprise sales.</p>
+        <a href="https://bizmorapay.weebly.com/" target="_blank" rel="noopener">Visit ↗</a>
+      </div>
+      <div class="card">
+        <h3>MomentStream</h3>
+        <p>Short-film app. Curation via random frame extraction and image analysis.</p>
+        <a href="https://digifreely.github.io/momentstream/" target="_blank" rel="noopener">Visit ↗</a>
+      </div>
+      <div class="card">
+        <h3>Learnicorn</h3>
+        <p>Gamification for early education.</p>
+        <a href="https://digifreely.blogspot.com/p/home.html" target="_blank" rel="noopener">Visit ↗</a>
+      </div>
+      <div class="card">
+        <h3>FortuneCookies</h3>
+        <p>A horoscope app.</p>
+        <a href="https://digifreely.github.io/fortunecookies/" target="_blank" rel="noopener">Visit ↗</a>
+      </div>
+      <div class="card">
+        <h3>Orbital AI</h3>
+        <p>A news app.</p>
+        <a href="https://digifreely.github.io/orbitalai/" target="_blank" rel="noopener">Visit ↗</a>
+      </div>
+      <div class="card">
+        <h3>Android apps</h3>
+        <p>HeyHi (geofenced, backend-free chat), Chota Stream (AI-curated films), Notekar (vision + translation), Dating Deck (gamified dating). Shut down after running too long without revenue.</p>
+        <a href="https://play.google.com/store/apps/dev?id=6053860284185165398" target="_blank" rel="noopener">Visit ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>PATENT APP. NO. 202031039134 — SUPRATIM BHATTACHARYYA</p>
+  </footer>
+
+</div>
+</body>
+</html>
